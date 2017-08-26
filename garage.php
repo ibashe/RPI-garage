@@ -9,13 +9,13 @@ $status="1";
 if(isset($_POST['turnon'])){
     // this is where you call your python or whatever when the status is already 1
     $status="0";
-    echo shell_exec("/home/pi/garage/gpio37on.py 2>&1");
+    echo shell_exec("/home/pi/garage/gpio7.py 2>&1");
 }
 
 if(isset($_POST['turnoff'])){
     // this is where you call your python or whatever when status is already 0
     $status="1";
-    echo shell_exec("/home/pi/garage/gpio37off.py 2>&1");
+    echo shell_exec("/home/pi/garage/gpio7.py 2>&1");
 }
 
 if ($status==="1") {
